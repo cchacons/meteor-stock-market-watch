@@ -1,0 +1,31 @@
+<template name="stocks">
+
+  <div class="row">
+    <div class="col-xs-12">
+      <select id="stock-filter" class="form-control">
+        <option value="all">All</option>
+        <option value="up">Up trend</option>
+        <option value="down">Down trends</option>
+      </select>
+    </div>
+  </div>
+
+<div class="row">
+  <div class="col-xs-12">
+    {{sessionExample}}
+  </div>
+</div>
+
+  <div class="row">
+    <div class="col-xs-12">
+      <ul class="list-group">
+        {{#each stocks}}
+        <li class="list-group-item">{{symbol}}
+          <button id="delete" class="float-right btn btn-danger btn-xs">delete</button>
+          <div class="float-right {{cssPriceClass}}">{{price}}</div>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</template>

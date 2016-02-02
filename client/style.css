@@ -1,0 +1,19 @@
+.float-right {
+  float: right;
+  margin-right: 10px;
+}
+
+.price-up {
+  color:#449D44;
+  animation: fadein 2s;
+}
+
+.price-down {
+  color:#C9302C;
+  animation: fadein 2s;
+}
+
+@keyframes fadein {
+  from {opacity :0;}
+  to  {opacity :1;}
+}
