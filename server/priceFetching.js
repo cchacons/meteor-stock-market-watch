@@ -8,7 +8,7 @@ Meteor.setInterval(function(){
   console.log(symbols);
 
   //get data from Yahoo Finance API
-  var results = YahooFinance.snapshot({symbols: symbols, fields: ['s', 'b']});
+  var results = YahooFinance.snapshot({symbols: symbols, fields: ['s', 'b', 'n']});
   console.log(results);
 
   //update collection
@@ -20,7 +20,14 @@ Meteor.setInterval(function(){
       // calculate price change
       let change = stock.price ? result.bid - stock.price : null;
       // update entry
-      Stocks.update(stock._id, {$set: {price: result.bid, change: change}});
+      Stocks.update(stock._id, {$set:
+        {
+          name: result.name,
+          price: result.bid,
+          change: change
+        }
+        });
+
     }
   });
 

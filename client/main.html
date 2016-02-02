@@ -4,7 +4,20 @@
 
 <body>
   <div id="main-container" class="container">
-    {{>addStock}}
-    {{>stocks}}
+    {{> sAlert}}
+    {{> addStock}}
+    {{> stocks}}
   </div>
+
+  <div class="container">
+    {{#with selectedStock}}
+      {{> stockDetail}}
+    {{/with}}
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p class="text-muted">Powered by Meteor and Yahoo Finance API</p>
+    </div>
+  </footer>
 </body>

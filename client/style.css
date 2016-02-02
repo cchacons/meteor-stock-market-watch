@@ -1,3 +1,31 @@
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+
+#container-area {
+  min-width: 310px;
+  height: 600px;
+}
+
 .float-right {
   float: right;
   margin-right: 10px;
@@ -16,4 +44,18 @@
 @keyframes fadein {
   from {opacity :0;}
   to  {opacity :1;}
+}
+
+.detail-symbol,
+.current-price,
+.chart-toggle {
+  color: rgb(113, 114, 115);
+}
+
+.chart-toggle {
+  margin-top: 1em;
+}
+
+li:hover {
+  background-color: rgb(216, 223, 237);
 }

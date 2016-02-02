@@ -4,7 +4,7 @@
     <div class="col-xs-12">
       <select id="stock-filter" class="form-control">
         <option value="all">All</option>
-        <option value="up">Up trend</option>
+        <option value="up">Up trends</option>
         <option value="down">Down trends</option>
       </select>
     </div>
@@ -20,7 +20,7 @@
     <div class="col-xs-12">
       <ul class="list-group">
         {{#each stocks}}
-        <li class="list-group-item">{{symbol}}
+        <li class="stockListing list-group-item">{{symbol}} - {{name}}
           <button id="delete" class="float-right btn btn-danger btn-xs">delete</button>
           <div class="float-right {{cssPriceClass}}">{{price}}</div>
         </li>
