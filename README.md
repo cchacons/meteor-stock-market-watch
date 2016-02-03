@@ -7,10 +7,8 @@ Built to test and explore Meteor with information from various web sources.
 
 ## Features
 * Auto-refresh every 10sec
-* Historical quote data (chart)
+* Historical quote data (365-day line/OHLC chart)
 * Filter trending quotes
-
-![Screenshot](public/screenshot.png)
 
 ## Packages
 ```
@@ -23,5 +21,9 @@ meteor add reactive-var
 meteor add jhuenges:highstock
 meteor add accounts-ui accounts-password
 ```
+
+![Screenshot](public/screenshot.png)
+
+
 ### License
 [The MIT License](LICENSE.md)
