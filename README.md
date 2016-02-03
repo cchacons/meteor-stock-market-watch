@@ -17,3 +17,4 @@ meteor add reactive-var
 
 meteor add jhuenges:highstock
 
+meteor add accounts-ui accounts-password
