@@ -10,6 +10,7 @@ Built to test and explore Meteor with information from various web sources.
 * Historical quote data (chart)
 * Filter trending quotes
 
+![Screenshot](public/screenshot.png)
 
 ## Packages
 ```
