@@ -11,9 +11,10 @@ Template.stocks.helpers({
     }
     return entries;
   },
+
   // sessionExample: function() {
   //   return Session.get('filter');
-  // }
+  // },
 
   cssPriceClass: function() {
     var newClass = '';
