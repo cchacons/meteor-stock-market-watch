@@ -1,14 +1,15 @@
 # Stock Market Watcher ###
 
-A Stock Market application built with [Meteor](https://www.meteor.com/) utilizing the [Yahoo Finance API](http://finance.yahoo.com/)
+A Stock Market application built with [Meteor](https://www.meteor.com/) utilizing the [Yahoo Finance API](http://finance.yahoo.com/).
 
-Built to test and explore Meteor with information from various web sources.
+Built for learning Meteor, compiled information from various web sources.
 
 
 ## Features
 * Auto-refresh every 10sec
 * Historical quote data (365-day line/OHLC chart)
 * Filter trending quotes
+* Per user stocks (in progress)
 
 ## Packages
 ```

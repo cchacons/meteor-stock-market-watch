@@ -11,15 +11,22 @@ Template.stocks.helpers({
       filter = { change: {$lt:0} };
     }
 
-    //return Stocks.find({owner: Meteor.userId()}, {sort: ["symbol", "asc"]});
-    entries = Stocks.find(filter);
+    //return Stocks.find({owner: Meteor.userId()});
+    entries = Stocks.find(filter, {sort: ["symbol", "asc"]});
     return entries;
   },
 
+/**
+ * return 'selected' CSS class on selected stock
+ */
   selected: function () {
     return Session.equals("selectedStock", this._id) ? "selected" : '';
   },
 
+/**
+ * return green if price going up, red if down
+ * and nothing if not changed
+ */
   cssPriceClass: function() {
     var newClass = '';
     if (this.change > 0) {
@@ -43,6 +50,7 @@ Template.stocks.events({
     Session.set('filter', event.target.value);
   },
 
+  // get historical data for selected stock
   'click .stockListing': function() {
     var name = this.name;
     var symbol = this.symbol;

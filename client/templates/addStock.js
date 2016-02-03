@@ -7,9 +7,8 @@ Template.addStock.events({
     };
 
     Meteor.call('addStock', data, function(err, result) {
-      console.log('result',result);
+      console.log('addStock result:', data, err, result);
       if (err) {
-        console.log(err);
         sAlert.error(err.reason);
       }
     });
