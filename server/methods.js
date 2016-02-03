@@ -1,4 +1,5 @@
 Meteor.methods({
+
   getName: function(symbol) {
     var data = YahooFinance.snapshot({
       symbols: [symbol],

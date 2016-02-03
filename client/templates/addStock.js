@@ -6,9 +6,12 @@ Template.addStock.events({
       symbol: event.target.querySelector('#symbol').value
     };
 
-    Meteor.call('addStock', data, function(err) {
-      if (err)
+    Meteor.call('addStock', data, function(err, result) {
+      console.log('result',result);
+      if (err) {
+        console.log(err);
         sAlert.error(err.reason);
+      }
     });
 
     // reset form (clear fields)
