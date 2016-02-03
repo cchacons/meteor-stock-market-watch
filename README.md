@@ -12,13 +12,10 @@ Built to test and explore Meteor with information from various web sources.
 
 ## Packages
 ```
-meteor remove insecure
-meteor remove autopublish
+meteor remove insecure autopublish
 
-meteor add twbs:bootstrap
-meteor add ajbarry:yahoo-finance
-meteor add reactive-var
-meteor add jhuenges:highstock
+meteor add twbs:bootstrap reactive-var
+meteor add ajbarry:yahoo-finance jhuenges:highstock
 meteor add accounts-ui accounts-password
 ```
 
